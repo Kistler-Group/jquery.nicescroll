@@ -1959,7 +1959,7 @@
           var ww = parseFloat(self.win.css("width")) + 1;
           self.win.css('width', ww);
           self.synched("chromefix", function() {
-            self.win.attr("style", tmp);
+            self.win.attr("style", self.win.attr("style") || tmp);
           });
         }
 
